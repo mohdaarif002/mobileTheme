@@ -19,5 +19,31 @@ class HomeController extends BaseController {
 	{
 		return View::make('hello');
 	}
-
+        
+        public function loginAction()
+        {
+            
+           $userId= Input::get('userId');
+           $password=Input::get('password');
+           $salt='samar';
+           $checkPassword=$password.$salt; 
+//         $hashPassword=Hash::make($password.$salt);
+//         DB::table('mobileTable')->insert(array('userId'=>$userId,'password'=>$hashPassword));
+          $row=DB::table('mobileTable')->where('userId',$userId)->first();
+         
+          if($row){
+          if (Hash::check($checkPassword, $row->password))
+          {return 'hello Admin!!';}   
+                
+           else 
+             {echo'heeeee';
+             return Redirect::to('login')->with('check','T');}
+             
+          }else
+          {echo'heeeee';
+              return Redirect::to('login')->with('check','T');}
+          
+          
+        }
+        
 }

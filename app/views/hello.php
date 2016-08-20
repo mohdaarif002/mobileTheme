@@ -1,19 +1,33 @@
-<html>
+
+<!DOCTYPE html >
+<html >
      <head>
             <meta charset="utf-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+            <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="jquery-1.9.1.min.js"></script>            
+<script src="bootstrap/js/bootstrap.min.js"></script>            
 
-            <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-            <style>
-                    footer {
-                   background-color: gray;
-                   color: white;
-                   padding: 15px;
-                 }
-                
-            </style>
+<script src="jquery.devrama.lazyload.min-0.9.3.js"></script>
+<script type="text/javascript">      
+    $(function(){
+        $.DrLazyload();
+    });   
+</script>
+     
+       <style>
+            footer {
+           background-color: gray;
+           color: white;
+           padding: 15px;
+         }
+
+        img{
+            border:2px solid black;
+        }
+      </style>
 		
 </head>
     <body>
@@ -31,12 +45,12 @@
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="about">About</a></li>
+                        <li><a href="projects">Projects</a></li>
+                        <li><a href="contact">Contact</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                     </ul>
                 </div>
             </div>
@@ -45,8 +59,8 @@
     <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-2 sidenav">
-      <p><a href="practiceBootstrap">newPage</a></p>
-      <p><a href="#">Link</a></p>
+      <p><a href="practiceBootstrap">Practice Page</a></p>
+      <p><a href="https://drive.google.com/open?id=0B-Mf8SRJeuRbcVdCbzR5d3dXbnc" target="_blank" download>Resume</a></p>
       <p><a href="#">Link</a></p>
     </div>
     <div class="col-sm-8 text-left"> 
@@ -111,20 +125,61 @@
   </div>
 </div>
 
-    
+<div class="container-fluid ">
+    <div class="row">
+        <center><h3>Favourite Actors</h3></center>
+                <div class="col-sm-2 col-sm-offset-2"> 
+                    <img data-lazy-src="heroes/aamir.jpg" height="120px" width="100%" >
+                     </div>
+                     <div class="col-sm-2">
+                         <img data-lazy-src="heroes/ranveer.jpg" height="120px" width="100%"  >
+                     </div>
+                     <div class="col-sm-2">
+                         <img data-lazy-src="heroes/leonardo.jpg" height="120px" width="100%" >
+                     </div>
+                     <div class="col-sm-2">
+                         <img data-lazy-src="heroes/rdj.jpg" height="120px" width="100%" >
+                     </div>  
+        </div>
+    </div>
+ <div class="container-fluid ">
+    <div class="row">
+        <center><h3>Favourite Books</h3></center>
+                <div class="col-sm-2 col-sm-offset-2"> 
+                    <img data-lazy-src="books/ferrari.jpg" height="120px" width="88%" >
+                     </div>
+                     <div class="col-sm-2">
+                         <img data-lazy-src="books/revolution.jpg" height="120px" width="88%"  >
+                     </div>
+                     <div class="col-sm-2">
+                         <img data-lazy-src="books/hobbit.jpg" height="120px" width="88%" >
+                     </div>
+                     <div class="col-sm-2">
+                         <img data-lazy-src="books/2.jpg" height="120px" width="88%" >
+                     </div>  
+        </div>
+         <div class="row">
+        <center><h3>Favourite Sports</h3></center>
+                <div class="col-sm-2 col-sm-offset-2"> 
+                    <img data-lazy-src="sports/kohli.jpg" height="120px" width="88%" >
+                     </div>
+                     <div class="col-sm-2">
+                         <img data-lazy-src="sports/ronaldo.jpg" height="120px" width="88%"  >
+                     </div>
+                     <div class="col-sm-2">
+                         <img data-lazy-src="sports/hockey.jpg" height="120px" width="88%" >
+                     </div>
+                     <div class="col-sm-2">
+                         <img data-lazy-src="sports/lindan.jpg" height="120px" width="88%" >
+                     </div>  
+        </div>
+    </div>
+  
        
-        
-        
  <footer class="container-fluid text-center">
   <p>Footer Text</p>
 </footer>
-        
-        
-           <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-        
-    </body>
     
+
+  </body> 
 </html>
